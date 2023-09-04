@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 'hd'
+    'ma'
+    'ft';
+    gap: 5rem;
+
+}
+
+header{
+    grid-area: hd;
+}
+
+main{
+    grid-area: ma;
+}
+
+footer{
+    grid-area: ft;
+}
+
+.input{
+    border: .09rem solid black;
+    border-radius: .2rem;
+    width: 100%;
+    padding: .5em;
+    background-color: transparent;
+}
+
+.input:focus{
+    background-color: seashell;
+    border: .09rem solid black;
+    border-radius: .2rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+::placeholder{
+    padding-left: 1rem;
+    font-size: .9rem;
+}
+
+.right{
+    display: grid;
+    grid-auto-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'sub sub'
+    'about support';
+    row-gap: 2rem;
+}
+
+.subscribe{
+    grid-area: sub;
+}
+
+.about-us{
+    grid-area: about;
+}
+
+.support{
+    grid-area: support;
+}
